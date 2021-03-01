@@ -1,0 +1,31 @@
+﻿@using Outlook_Calendar.Models;
+@using System.Globalization;
+@model List<CalendarEvent>
+
+@if (Model.Count != 0)
+{
+    <div>
+        @foreach (CalendarEvent calendarEvent in Model)
+        {
+            <div style="margin: 30px;" class="row">
+                <a style="cursor: pointer; text-decoration: none;" class="col-sm-4" onclick="location.href = '@Url.Action("Event", "Calendar", new {eventId = calendarEvent.Id})'">
+                    <div>
+                        <p>Subject : @calendarEvent.Subject</p>
+                        <p>Content : @calendarEvent.Body.Content</p>
+                        <p>Start Date Time : @(calendarEvent.Start.DateTime.ToString("dd-MMM-yyyy hh:mm tt")) (@calendarEvent.Start.TimeZone)</p>
+                        <p>End Date Time : @(calendarEvent.End.DateTime.ToString("dd-MMM-yyyy hh:mm tt")) (@calendarEvent.End.TimeZone)</p>
+                    </div>
+                </a>
+                <a style="cursor: pointer; text-decoration: none;" onclick="location.href = '@Url.Action("UpdateEvent", "Calendar", new {eventId = calendarEvent.Id})'">Edit</a>
+                <span style="margin-right: 20px; margin-left: 20px;">|</span>
+                <a style="cursor: pointer; text-decoration: none;" onclick="location.href = '@Url.Action("DeleteEvent", "Calendar", new { eventId = calendarEvent.Id })'"> Delete </a>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <div style="margin: 30px; font-size: 20px;">
+        No Events Found
+    </div>
+}

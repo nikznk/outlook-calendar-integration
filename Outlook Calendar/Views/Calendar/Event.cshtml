@@ -1,0 +1,10 @@
+﻿@using Outlook_Calendar.Models;
+@model CalendarEvent
+<div>
+    <div style="margin: 20px;">
+        <p>Subject : @Model.Subject</p>
+        <p>Content : @Model.Body.Content</p>
+        <p>Start Date Time : @(Model.Start.DateTime.ToString("dd-MMM-yyyy hh:mm tt")) (@Model.Start.TimeZone)</p>
+        <p>End Date Time : @(Model.End.DateTime.ToString("dd-MMM-yyyy hh:mm tt")) (@Model.End.TimeZone)</p>
+    </div>
+</div>
