@@ -10,8 +10,8 @@ namespace Outlook_Calendar.Controllers
 {
     public class CalendarController : Controller
     {
-        string tokensFile = "C:\\Users\\User Name\\Desktop\\Outlook Calendar\\Outlook Calendar\\Files\\tokens.json";
-
+        string tokensFile = "D:\\Code\\MS Calendar\\outlook-calendar-integration\\Outlook Calendar\\Files\\tokens.json";
+        
         public ActionResult CreateEvent(CalendarEvent calendarEvent)
         {
             JObject tokens = JObject.Parse(System.IO.File.ReadAllText(tokensFile));

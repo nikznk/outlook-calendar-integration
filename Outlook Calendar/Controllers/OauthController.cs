@@ -10,10 +10,10 @@ namespace Outlook_Calendar.Controllers
 {
     public class OAuthController : Controller
     {
-        string credentialsFile = "C:\\Users\\User Name\\Desktop\\Outlook Calendar\\Outlook Calendar\\Files\\credentials.json";
-        string adminCredentialsFile = "C:\\Users\\User Name\\Desktop\\Outlook Calendar\\Outlook Calendar\\Files\\adminCredentials.json";
-        string tokensFile = "C:\\Users\\User Name\\Desktop\\Outlook Calendar\\Outlook Calendar\\Files\\tokens.json";
-        string adminTokensFile = "C:\\Users\\User Name\\Desktop\\Outlook Calendar\\Outlook Calendar\\Files\\adminTokens.json";
+        string credentialsFile = "D:\\Code\\MS Calendar\\outlook-calendar-integration\\Outlook Calendar\\Files\\credentials.json";
+        string adminCredentialsFile = "D:\\Code\\MS Calendar\\outlook-calendar-integration\\Outlook Calendar\\Files\\adminCredentials.json";
+        string tokensFile = "D:\\Code\\MS Calendar\\outlook-calendar-integration\\Outlook Calendar\\Files\\tokens.json";
+        string adminTokensFile = "D:\\Code\\MS Calendar\\outlook-calendar-integration\\Outlook Calendar\\Files\\adminTokens.json";
 
         public ActionResult Callback(string code, string state, string error)
         {

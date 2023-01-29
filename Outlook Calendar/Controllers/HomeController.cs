@@ -9,8 +9,8 @@ namespace Outlook_Calendar.Controllers
 {
     public class HomeController : Controller
     {
-        string credentialsFile = "C:\\Users\\User Name\\Desktop\\Outlook Calendar\\Outlook Calendar\\Files\\credentials.json";
-        string adminCredentialsFile = "C:\\Users\\User Name\\Desktop\\Outlook Calendar\\Outlook Calendar\\Files\\adminCredentials.json";
+        string credentialsFile = "D:\\Code\\MS Calendar\\outlook-calendar-integration\\Outlook Calendar\\Files\\credentials.json";
+        string adminCredentialsFile = "D:\\Code\\MS Calendar\\outlook-calendar-integration\\Outlook Calendar\\Files\\adminCredentials.json";
 
         public ActionResult Index()
         {
